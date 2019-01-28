@@ -1,0 +1,26 @@
+# Notice: This template has only been tested 
+# under Python27 + GAE standard environment
+#application: sample-app5
+#version: 1
+#runtime: python27
+# threadsafe is required but can be either true or 
+# false. For some package, it should be true e.g. Flask
+threadsafe: true
+api_version: 1
+
+handlers:
+- url: /.*
+  script: helloworld.app
+  
+
+
+    
+env_variables:
+  CLOUD_SQL_INSTANCE_NAME: secret-tempest-229619:us-central1:instance4
+  DB_USER: root
+  DB_PASS: qwerty
+  DB_NAME: rishi
+# [END gae_python_mysql_env]
+
+beta_settings:
+  cloud_sql_instances: secret-tempest-229619:us-central1:instance4
